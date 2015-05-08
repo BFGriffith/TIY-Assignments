@@ -71,10 +71,19 @@ expect(plus("zero", "seven")).to.equal(7);
 expect(plus("zero", "eight")).to.equal(8);
 expect(plus("zero", "nine")).to.equal(9);
 
+expect(plus("one", "zero")).to.equal(1);
 expect(plus("one", "one")).to.equal(2);
 expect(plus("one", "two")).to.equal(3);
 expect(plus("one", "three")).to.equal(4);
 expect(plus("one", "four")).to.equal(5);
+expect(plus("one", "five")).to.equal(6);
+expect(plus("one", "six")).to.equal(7);
+expect(plus("one", "seven")).to.equal(8);
+expect(plus("one", "eight")).to.equal(9);
+expect(plus("one", "nine")).to.equal(10);
+
+
+
 
 expect(subtract).to.exist;
 expect(subtract("zero", "zero")).to.equal(0);
