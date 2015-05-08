@@ -45,7 +45,11 @@ function subtract(c, d){
   return c - d;
 }
 
-plus("zero", "zero");
+function multiply(e, f){
+  var e = toEnglish(e);
+  var f = toEnglish(f);
+  return e * f;
+}
 
 expect(toEnglish).to.exist;
 expect(toEnglish("zero")).to.equal(0);
@@ -82,10 +86,22 @@ expect(plus("one", "seven")).to.equal(8);
 expect(plus("one", "eight")).to.equal(9);
 expect(plus("one", "nine")).to.equal(10);
 
-
+expect(plus("two", "zero")).to.equal(2);
+expect(plus("two", "one")).to.equal(3);
+expect(plus("two", "two")).to.equal(4);
 
 
 expect(subtract).to.exist;
 expect(subtract("zero", "zero")).to.equal(0);
 expect(subtract("zero", "one")).to.equal(-1);
 expect(subtract("zero", "two")).to.equal(-2);
+
+expect(multiply).to.exist;
+expect(multiply("zero", "zero")).to.equal(0);
+expect(multiply("zero", "one")).to.equal(0);
+
+expect(multiply("one", "one")).to.equal(1);
+expect(multiply("one", "two")).to.equal(2);
+
+expect(multiply("two", "one")).to.equal(2);
+expect(multiply("two", "two")).to.equal(4);
