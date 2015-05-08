@@ -39,10 +39,10 @@ function plus(x, y){
   return a + b;
 }
 
-function minus(x, y){
-  var a = toEnglish(x);
-  var b = toEnglish(y);
-  return a - b;
+function subtract(c, d){
+  var c = toEnglish(c);
+  var d = toEnglish(d);
+  return c - d;
 }
 
 plus("zero", "zero");
@@ -64,8 +64,19 @@ expect(plus("zero", "zero")).to.equal(0);
 expect(plus("zero", "one")).to.equal(1);
 expect(plus("zero", "two")).to.equal(2);
 expect(plus("zero", "three")).to.equal(3);
+expect(plus("zero", "four")).to.equal(4);
+expect(plus("zero", "five")).to.equal(5);
+expect(plus("zero", "six")).to.equal(6);
+expect(plus("zero", "seven")).to.equal(7);
+expect(plus("zero", "eight")).to.equal(8);
+expect(plus("zero", "nine")).to.equal(9);
 
-expect(minus).to.exist;
-expect(minus("zero", "zero")).to.equal(0);
-expect(minus("zero", "one")).to.equal(-1);
-expect(plus("zero", "two")).to.equal(-2);
+expect(plus("one", "one")).to.equal(2);
+expect(plus("one", "two")).to.equal(3);
+expect(plus("one", "three")).to.equal(4);
+expect(plus("one", "four")).to.equal(5);
+
+expect(subtract).to.exist;
+expect(subtract("zero", "zero")).to.equal(0);
+expect(subtract("zero", "one")).to.equal(-1);
+expect(subtract("zero", "two")).to.equal(-2);
