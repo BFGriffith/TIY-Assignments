@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 
-function toEnglish(word){
+function toNumber(word){
   if ( word === "zero" ){
     return 0;
   }
@@ -33,35 +33,49 @@ function toEnglish(word){
   }
 }
 
+
 function plus(x, y){
-  var a = toEnglish(x);
-  var b = toEnglish(y);
+  var a = toNumber(x);
+  var b = toNumber(y);
   return a + b;
 }
 
 function subtract(c, d){
-  var c = toEnglish(c);
-  var d = toEnglish(d);
+  var c = toNumber(c);
+  var d = toNumber(d);
   return c - d;
 }
 
 function multiply(e, f){
-  var e = toEnglish(e);
-  var f = toEnglish(f);
+  var e = toNumber(e);
+  var f = toNumber(f);
   return e * f;
 }
 
-expect(toEnglish).to.exist;
-expect(toEnglish("zero")).to.equal(0);
-expect(toEnglish("one")).to.equal(1);
-expect(toEnglish("two")).to.equal(2);
-expect(toEnglish("three")).to.equal(3);
-expect(toEnglish("four")).to.equal(4);
-expect(toEnglish("five")).to.equal(5);
-expect(toEnglish("six")).to.equal(6);
-expect(toEnglish("seven")).to.equal(7);
-expect(toEnglish("eight")).to.equal(8);
-expect(toEnglish("nine")).to.equal(9);
+function divide(g, h){
+  var g = toNumber(g);
+  var h = toNumber(h);
+  if (g === 0 && h === 0){
+    return NaN
+  }
+  if (g >== 0 && h === 0)
+    return 0
+  else (g, h){
+   return g * h;
+ }
+}
+
+expect(toNumber).to.exist;
+expect(toNumber("zero")).to.equal(0);
+expect(toNumber("one")).to.equal(1);
+expect(toNumber("two")).to.equal(2);
+expect(toNumber("three")).to.equal(3);
+expect(toNumber("four")).to.equal(4);
+expect(toNumber("five")).to.equal(5);
+expect(toNumber("six")).to.equal(6);
+expect(toNumber("seven")).to.equal(7);
+expect(toNumber("eight")).to.equal(8);
+expect(toNumber("nine")).to.equal(9);
 
 expect(plus).to.exist;
 expect(plus("zero", "zero")).to.equal(0);
@@ -105,3 +119,9 @@ expect(multiply("one", "two")).to.equal(2);
 
 expect(multiply("two", "one")).to.equal(2);
 expect(multiply("two", "two")).to.equal(4);
+
+expect(divide).to.exist;
+expect(divide("zero", "zero")).to.equal(NaN);
+expect(divide("one", "zero")).to.equal(0);
+
+expect(divide("two", "one")).to.equal(2);
