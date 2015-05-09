@@ -56,12 +56,12 @@ function divide(g, h){
   var g = toNumber(g);
   var h = toNumber(h);
   if (g === 0 && h === 0){
-    return NaN
+    return NaN;
   }
-  if (g >== 0 && h === 0)
-    return 0
-  else (g, h){
-   return g * h;
+  if (g !== 0 && h === 0)
+    return 0;
+  else{
+   return g / h;
  }
 }
 
