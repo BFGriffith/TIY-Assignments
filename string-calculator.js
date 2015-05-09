@@ -53,16 +53,17 @@ function multiply(e, f){
 }
 
 function divide(g, h){
-  var g = toNumber(g);
-  var h = toNumber(h);
-  if (g === 0 && h === 0){
+//  var g = toNumber(g);
+//  var h = toNumber(h);
+  if (toNumber(h) === 0 && toNumber(g) === 0){
     return NaN;
   }
-  if (g !== 0 && h === 0)
-    return 0;
+  else if (toNumber(h) === 0){
+    return Infinity;
+  }
   else{
-   return g / h;
- }
+   return toNumber(g) / toNumber(h);
+  }
 }
 
 expect(toNumber).to.exist;
@@ -122,6 +123,6 @@ expect(multiply("two", "two")).to.equal(4);
 
 expect(divide).to.exist;
 expect(divide("zero", "zero")).to.equal(NaN);
-expect(divide("one", "zero")).to.equal(0);
+expect(divide("one", "zero")).to.equal(Infinity);
 
 expect(divide("two", "one")).to.equal(2);
