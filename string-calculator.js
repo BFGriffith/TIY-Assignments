@@ -1,5 +1,8 @@
 var expect = require('chai').expect;
 
+//Normal mode: addition for "zero" to "nine"
+//BEAST mode: addition, subtraction, multiplication, and division
+//NIGHTMARE mode: five lines or less?
 function toNumber(word){
   if ( word === "zero" ){
     return 0;
@@ -32,12 +35,26 @@ function toNumber(word){
     return 9;
   }
 }
+//@param {string} English number word, e.g. "one"
+//@retun {Number} the numeric value of "word"
+/*
+function toNumber(word)
+var numbers = ["zero", "one", "two",]
+*/
 
-
-function plus(x, y){
-  var a = toNumber(x);
-  var b = toNumber(y);
+function plus(a, b){
+  var a = toNumber(a);
+  var b = toNumber(b);
   return a + b;
+}
+
+function plus (a, b){
+  if (toNumber(0) + toNumber(0)){
+    return 0;
+  }
+  else{
+    return a + b;
+  }
 }
 
 function subtract(c, d){
@@ -65,6 +82,40 @@ function divide(g, h){
    return toNumber(g) / toNumber(h);
   }
 }
+
+//@param {string} a
+//@param {string} b
+//return {string} Infinity or 0
+/*
+function divide(a, b){
+  if (b === "zero"){
+    return Infinity;
+  }
+  else{
+    return (a / b)
+  }
+}
+*/
+/*
+var numbers = [ "zero", "one", "two" ];
+var item, index = 0;
+while ( index < numbers.length ){
+  item = numbers[index];
+  //do something
+  index = index + 1;
+}
+for (var index = 1; index < numbers.length; index = index + 1){
+  //do something
+}
+for (var iteration = 0; iteration < 4; iteration = iteration + 1;{
+  //do something
+}
+for (var iteration = 0; iteration < 4; iteration++){
+  //do someting
+}
+numbers.forEach(function(item, index, all)){
+}
+*/
 
 expect(toNumber).to.exist;
 expect(toNumber("zero")).to.equal(0);
@@ -123,6 +174,7 @@ expect(multiply("two", "two")).to.equal(4);
 
 expect(divide).to.exist;
 expect(divide("zero", "zero")).to.equal(NaN);
+//NaN === NaN is Boolean false
 expect(divide("one", "zero")).to.equal(Infinity);
 
 expect(divide("two", "one")).to.equal(2);
