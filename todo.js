@@ -1,76 +1,90 @@
-//Ben Griffith
-var expect = require('chai')
-//I can list my tasks
+var expect = require('chai').expect;
+
+// I can list my tasks...
 var taskList = [ ];
-//function definition:
-function listTasks(){
-  console.log(taskList)
-}
-//function invocation:
 
-//I can add a task to my list?
-function addTask(task, tasklist){
-  //What is the task?
-  //Where is the task going?
-  //What order? Priority? lowest, on bottom: use push?
-  return taskList.push(task)
+// I can list my tasks...
+function listTasks(taskList) {
+  return taskList;
 }
 
-function editTask(position,newTaskName){
-    // Which task is being edited?
-    // What is the edit?
-    // New task name should be displayed on task list
-    return taskList[position] = newTaskName;
+// I can add a task to my list
+function addTaskToList(task, list){
+    return list.push({
+      text: task, completed: false
+    });
 }
 
-function deleteTask(position,list){
-  return taskList.splice(position, 1);
+/*
+function removeTaskToList(task, list){
+    return list.pop(task);
 }
 
-function prioritizeTask(oldIndex, newIndex, taskList)
+function priorityTaskToList(task, list){
+    return list.slice(task, task);
+}
+*/
 
-expect(taskList.length).to.Equal(0);
-addTask("remember the milk", taskList);
-expect(taskList[0]).to.equal("remember the milk");
-expect(taskList.length).to.equal(1);
-expect(taskList[0]).to.equal("remember the milk");
+expect(taskList.length).to.equal(0);
+addTaskToList("Remember the milk", taskList);
+expect(taskList[0].text).to.equal("Remember the milk");
 expect(taskList.length).to.equal(1);
 
+// expect what?
 expect(taskList.length).to.equal(1);
-addTask("wash the dishes", taskList);
-expect(taskList[1]).to.equal("wash the dishes");
+addTaskToList("Take out the trash", taskList);
+expect(taskList[1].text).to.equal("Take out the trash");
 expect(taskList.length).to.equal(2);
 
 expect(taskList.length).to.equal(2);
-addTask("take out the trash", taskList);
-expect(taskList[2]).to.equal("take out the trash");
+addTaskToList("Clean the bathroom", taskList);
+expect(taskList[2].text).to.equal("Clean the bathroom");
 expect(taskList.length).to.equal(3);
 
 expect(taskList.length).to.equal(3);
-editTask(0,"remember the milk and beer");
-expect(taskList[0]).to.equal("remember the milk and beer");
-expect(taskList.length).to.equal(3);
-expect(taskList[1]).to.equal("wash the dishes");
-expect(taskList[2]).to.equal("take out the trash");
+addTaskToList("Feed the dog", taskList);
+expect(taskList[3].text).to.equal("Feed the dog");
+expect(taskList.length).to.equal(4);
 
-expect(taskList.length).to.equal(3);
-deleteTask(1,taskList);
-expect(taskList.length).to.equal(2);
-expect(taskList[0]).to.equal("remember the milk and beer")
-expect(taskList[1]).to.equal("wash the dishes");
-expect(taskList[2]).to.equal(undefined);
+expect(taskList.length).to.equal(4);
+addTaskToList("Get the mail", taskList);
+expect(taskList[4].text).to.equal("Get the mail");
+expect(taskList.length).to.equal(5);
 
-expect(completeTask).to.exist;
-expect(taskList.length).to.equal(2);
-completeTask(1, taskList);
-expect(taskList.length).to.equal(2);
-expect(taskList[0]).to.equal("remember the milk and beer");
-expect(taskList[1]).to.equal("[X] wash the dishes");
+// expect(taskList[1]).to.not.be.completed?
+// console.log(taskList);
 
-expect(prioritizeTask).to.exist;
-expect(taskList.length).to.equal(2);
-prioritizeTask(0, 1, taskList);
-expect(taskList.length).to.equal(2)
-expect(taskList[0].to.equal("[X] wash the dishes"));
-expect(taskList[1].to.equal("remember the milk and beer"));
-console.log(taskList);
+
+
+/*
+taskList.prototype.move = function (old_list, new_list) {
+    while (old_list < 0) {
+        old_list +- taskList.length;
+    }
+    while (new_list < 0) {
+      new_list + taskList.length;
+    }
+    if (new_list >= taskList.length) {
+      var k = new_index - taskList.length;
+      while ((k--) + 1) {
+        taskList.push(undefined);
+     }
+   }
+taskList.splice(new_list, 0, taskList.splice(old_list, 1)[0]);
+return taskList;
+};
+
+/*
+Array.prototype.move = function(from, to) {
+  taskList.splice(to, 0, taskList.splice(from, 1)[0]);
+};
+*/
+
+
+/*
+console.log(taskList[0]);
+console.log(taskList[1]);
+console.log(taskList[2]);
+console.log(taskList[3]);
+console.log(taskList[4]);
+*/
