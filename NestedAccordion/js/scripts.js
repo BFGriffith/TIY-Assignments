@@ -5,7 +5,7 @@
 document.head.parentElement.className = "js"; // It's alive!
 
 var elements = document.querySelectorAll('h3');
-
+var elements = document.querySelectorAll(".cbp-nttrigger");
 // elements[0].addEventListener('click', function(){
 //     elements[0].parentElement.classList.toggle('cbp-ntopen');
 // });
@@ -24,8 +24,8 @@ var elements = document.querySelectorAll('h3');
 // console.log(index);
 
 _.forEach(elements, function(element, index, elements){
-    element.addEventListener('click', function(){
-        console.log(elements, index, element);
-        element.parentElement.classList.toggle('cbp-ntopen');
-    });
+  element.addEventListener('click', function(){
+  //  console.log(elements, index, elements);
+     element.parentElement.classList.toggle('cbp-ntopen');
+   });
 });
