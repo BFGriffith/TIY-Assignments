@@ -1,0 +1,22 @@
+{
+  "name": "NestedAccordion",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Epicurean306/TIY-Assignments",
+  "authors": [
+    "Epicurean306 <benjaminforbesgriffith@gmail.com>"
+  ],
+  "description": "blueprint-template:Nested-Accordion-style sample layout",
+  "main": "NestedAccordionIndex.html",
+  "license": "CC0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~3.8.0",
+    "modernizr": "~2.8.3"
+  }
+}
