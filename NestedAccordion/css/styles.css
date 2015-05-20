@@ -1,7 +1,7 @@
 html.js. cbp-ntcontent {
   display: none;
 }
-.cbp-ntopen > .cbp-ntcontent {
+git .cbp-ntopen > .cbp-ntcontent {
   display: block;
 }
 body {
@@ -28,6 +28,10 @@ h4 {
   h5 {
     color: darkgrey;
   }
+  .cbp-nttrigger::before {
+    content: ">>";
+    padding-right: 0.5em; //etc. (can accept normal properties, does not alter HTML)
+  }
   li {
     display: block;
   }
@@ -36,4 +40,11 @@ h4 {
   }
   .cbp-ntopen > .cbp-ntcontent {
     display: block;
+  }
+  li:hover {
+    cursor: pointer;
+  }
+  .cbp-nttrigger:hover::before {
+    cursor: pointer;
+    font-weight: bold;
   }
