@@ -8,36 +8,30 @@
   <title>Blueprint: Responsive Full Width Tabs</title>
   <meta name="description" content="Blueprint: Responsive Full Width Tabs" />
   <meta name="keywords" content="responsive tabs, full width tabs, template, blueprint" />
-  <meta name="author" content="Codrops" />
-  <link rel="shortcut icon" href="../favicon.ico">
-  <link rel="stylesheet" type="text/css" href="css/demo.css" />
-  <link rel="stylesheet" type="text/css" href="css/component.css" />
-  <!--[if IE]>
-  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+  <meta name="author" content="Javascript and CSS by Ben Griffith (http://epicurean306.github.io/), blueprint by Codrops" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
 </head>
 
 <body>
   <div class="container">
-    <header class="clearfix">
-      <span>Blueprint
-        <span class="bp-icon bp-icon-about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span>
-      </span>
-      <h1>Responsive Full Width Tabs</h1>
-      <nav>
-        <a href="http://tympanus.net/Blueprints/SplitLayout/" class="bp-icon bp-icon-prev" data-info="previous Blueprint">
-          <span>Previous Blueprint</span>
-        </a>
-        <a href="http://tympanus.net/Blueprints/GridGallery/" class="bp-icon bp-icon-next" data-info="next Blueprint">
-          <span>Next Blueprint</span>
-        </a>
-        <a href="http://tympanus.net/codrops/?p=18521" class="bp-icon bp-icon-drop" data-info="back to the Codrops article">
-          <span>back to the Codrops article</span>
-        </a>
-        <a href="http://tympanus.net/codrops/category/blueprints/" class="bp-icon bp-icon-archive" data-info="Blueprints archive">
-          <span>Go to the archive</span>
-        </a>
-      </nav>
+    <span>Blueprint
+      <span class="bp-icon bp-icon-about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span>
+    </span>
+    <h1>Responsive Full Width Tabs</h1>
+    <nav>
+      <a href="http://tympanus.net/Blueprints/SplitLayout/" class="bp-icon bp-icon-prev" data-info="previous Blueprint">
+        <span>Previous Blueprint</span>
+      </a>
+      <a href="http://tympanus.net/Blueprints/GridGallery/" class="bp-icon bp-icon-next" data-info="next Blueprint">
+        <span>Next Blueprint</span>
+      </a>
+      <a href="http://tympanus.net/codrops/?p=18521" class="bp-icon bp-icon-drop" data-info="back to the Codrops article">
+        <span>back to the Codrops article</span>
+      </a>
+      <a href="http://tympanus.net/codrops/category/blueprints/" class="bp-icon bp-icon-archive" data-info="Blueprints archive">
+        <span>Go to the archive</span>
+      </a>
+    </nav>
     </header>
     <div id="tabs" class="tabs">
       <nav>
@@ -70,7 +64,7 @@
         </ul>
       </nav>
       <div class="content">
-        <section id="section-1">
+        <section id="section-1" class="content-current">
           <div class="mediabox">
             <img src="img/01.png" alt="img01" />
             <h3>Sushi Gumbo Beetroot</h3>
@@ -156,13 +150,16 @@
           </div>
         </section>
       </div>
-      <!-- /content -->
+      <!-- .content -->
     </div>
-    <!-- /tabs -->
+    <!-- .tabs#tabs -->
     <p class="info">Food Shapes/Icons by <a href="http://psdblast.com/50-food-icon-set-psd">PsdBlast</a></p>
   </div>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.min.js"></script>
-  <script src="js/FullWidthTabsScripts.js"></script>
+  <!-- .container -->
+  <script src="bower_components/modernizr/modernizr.min.js"></script>
+  <script src="bower_components/lodash/lodash.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>

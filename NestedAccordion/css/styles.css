@@ -1,0 +1,50 @@
+html.js. cbp-ntcontent {
+  display: none;
+}
+git .cbp-ntopen > .cbp-ntcontent {
+  display: block;
+}
+body {
+  background-color: white;
+  font-family: Calibri, Arial, sans-serif;
+  line-height: 30px;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+h3, h4 {
+  color: cornflowerblue;
+  font-size: 20pt;
+  border-bottom: 1px solid lightgrey;
+}
+h3 {
+  color: cornflowerblue;
+  font-size: 30pt;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 20px;
+}
+h4 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  h5 {
+    color: darkgrey;
+  }
+  .cbp-nttrigger::before {
+    content: ">>";
+    padding-right: 0.5em; //etc. (can accept normal properties, does not alter HTML)
+  }
+  li {
+    display: block;
+  }
+  .js .cbp-ntcontent {
+    display: none;
+  }
+  .cbp-ntopen > .cbp-ntcontent {
+    display: block;
+  }
+  li:hover {
+    cursor: pointer;
+  }
+  .cbp-nttrigger:hover::before {
+    cursor: pointer;
+    font-weight: bold;
+  }
