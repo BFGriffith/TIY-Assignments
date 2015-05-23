@@ -1,6 +1,3 @@
-// Just a tracer...
-// alert("It's alive!");
-// debugger;
 alert('hello');
 document.head.parentNode.className = "js"; // It's alive!
 
