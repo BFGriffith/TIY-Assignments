@@ -1,20 +1,26 @@
+/*
 alert('hello');
 document.head.parentNode.className = "js"; // It's alive!
 
 var elements = document.querySelectorAll('h3');
 var elements = document.querySelectorAll('.cbp-nttrigger');
 
-
 _.forEach(document.querySelectorAll('.cbp-nttrigger'), function(element) {
   element.addEventListener('click', function() {
 
   });
 });
+*/
 
-jQuery('.cbp-nttrigger').on('click', function(event) {
-  jQuery(event.target).parent().toggleClass('cbp-ntopen');
+$('.cbp-nttrigger').on('click', function(event) {
+  $(event.target).parent().toggleClass('cbp-ntopen');
 });
 
+/*
+$('.cbp-nttrigger').on('mouseover', function(event){
+		console.log("hover?");
+});
+*/
 /*
 for (var index = 0; index < elements.length; index++) {
   var element = elements[index]
