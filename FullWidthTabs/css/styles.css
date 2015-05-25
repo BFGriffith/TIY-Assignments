@@ -13,7 +13,6 @@ body {
   clear: both;
 }
 .content section[id^="section-"] {
-  background-color: lightgrey;
   display: none;
   padding-left: 1em;
   padding-right: 1em;
@@ -33,10 +32,41 @@ body {
   padding-left: 1em;
   padding-right: 1em;
 }
-.mediabox img {
-  width: 100%;
-}
 .mediabox:first-of-type {
   padding-left: 2em;
   width: float: left;
+}
+.mediabox img {
+  width: 100%;
+}
+
+nav ul{
+  border-bottom: 1px solid cornflowerblue;
+  text-align: center;
+  margin: 5em 0 5em 0;
+  padding-bottom: 0.75em
+}
+nav li {
+	display: inline-block;
+	margin: 0 0.5em 0 0;
+}
+
+nav a {
+  padding: 0.5em 1em 0.5em 1em;
+  border: solid lightgray;
+	border-width: 1px 1px 0 1px;
+  font-size: 20pt;
+  font-family: 'Josefin Sans';
+  text-decoration: none;
+  color: lightgray;
+}
+.tab-current {
+  padding-top: 0.4em;
+  border-width: 3px 1px 4px 1px;
+  padding-bottom: 0.4em;
+  border-top-color: cornflowerblue;
+  border-left-color: cornflowerblue;
+  border-right-color: cornflowerblue;
+  border-bottom-color: white;
+  color: cornflowerblue;
 }
