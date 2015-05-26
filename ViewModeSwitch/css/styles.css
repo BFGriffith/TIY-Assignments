@@ -1,0 +1,39 @@
+body {
+    color: darkgrey;
+    font-family: 'Calibri', sans-serif;
+}
+
+h1 {
+    color: cornflowerblue;
+    font-family: 'Comic Sans', sans-serif;
+    font-size: 30pt;
+}
+
+
+h3 {
+    color: cornflowerblue;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 20pt;
+    list-style: none;
+}
+
+.cbp-vm-details {
+    color: cornflowerblue;
+}
+
+#cbp-vm {
+    border-style: solid;
+    border-color: cornflowerblue;
+    padding-top: 5em;
+    padding-left: 5em;
+}
+
+li {
+    list-style: none;
+}
+
+.cbp-vm-options {
+    color: cornflowerblue;
+    text-decoration-line: underline;
+}
