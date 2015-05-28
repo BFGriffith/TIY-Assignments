@@ -92,11 +92,37 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   custom styles
    ========================================================================== */
 .timeline {
   margin: 0; padding: 0;
   list-style: none;
+}
+/*code for speech bubble pointer from http://www.ilikepixels.co.uk/drop/bubbler/*/
+.timeline li article::after {
+  content: '';
+position: absolute;
+border-style: solid;
+border-width: 10px 10px 10px 0;
+border-color: transparent #7ABFEB;
+display: block;
+width: 0;
+z-index: 1;
+left: 37%;
+top: 10px;
+}
+.timeline li:nth-child(even) article::after {
+  content: '';
+position: absolute;
+border-style: solid;
+border-width: 10px 10px 10px 0;
+border-color: transparent #5B92CA;
+display: block;
+width: 0;
+z-index: 1;
+left: 0px;
+top: 10px;
+left: 37%;
 }
 .timeline li {
   padding-bottom: 2ex;
@@ -118,45 +144,6 @@ textarea {
   border-radius: 10px;
   padding: 2ex 2em;
 }
-a[triangle-pointer]:before
-{
-    content: "";
-    position: absolute;
-    border-bottom: 21px solid #6CBFEE;
-    border-left: 21px solid transparent;
-    border-right: 21px solid transparent;
-    visibility: hidden;
-    bottom: -20px;
-    left: -12px;
-}
-a[triangle-pointer]:after
-{
-    position: absolute;
-    content: attr(bubbletooltip);
-    color: #FFF;
-    font-weight:bold;
-    bottom: -35px;
-    left: -26px;
-    white-space: nowrap;
-    background: #e0afe0;
-    padding: 5px 10px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius:6px;
-    -khtml-border-radius:6px;
-    border-radius: 6px;
-    visibility: hidden;
-}
-/*
-.triangle-pointer li {
-    display: block;
-    float:left;
-    border-color: #ffffff #6CBFEE #ffffff #ffffff;
-    border-style: solid;
-    border-width: 20px;
-    width: 0px;
-    height: 0px;
-}
-*/
 .timeline li:nth-child(even) article {
   color: white;
   background-color: #0393CE;
@@ -184,22 +171,9 @@ a[triangle-pointer]:after
   color: white;
   background-color: #6CBFEE;
 }
-.timeline h3 {
-  text-decoration-style: underline;
+.timeline article h3 {
+  border-bottom: 2px solid white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes
