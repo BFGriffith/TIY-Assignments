@@ -25,15 +25,38 @@ h3 {
 #cbp-vm {
     border-style: solid;
     border-color: cornflowerblue;
-    padding-top: 5em;
-    padding-left: 5em;
 }
-
-li {
+ul {
     list-style: none;
 }
-
-.cbp-vm-options {
-    color: cornflowerblue;
-    text-decoration-line: underline;
+.cbp-vm-switcher.cbp-vm-view-grid li {
+    list-style: none;
+    display: inline-block;
+    width: 30%;
 }
+.cbp-vm-options .cbp-vm-icon {
+  display: inline-block;
+  width: 5em; height: 5em;
+  background-color: lightblue;
+}
+
+.cbp-vm-options a {
+    color: cornflowerblue;
+    text-decoration-line: none;
+    text-align: right;
+}
+.cbp-vm-icon {
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  background-color: lightblue;
+}
+
+.cbp-vm-switcher.cbp-vm-view-list li > * {
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+  }
+  .cbp-vm-switcher.cbp-vm-view-list li .cbp-vm-image {
+      width: 25%; max-width: 200px;
+    }
