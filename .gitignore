@@ -2,3 +2,10 @@ FullWidthTabs/bower_components/
 QuotesRotator/bower_components/
 ViewModeSwitch/bower_components/
 dependencies
+node_modules
+FullWidthTabs/js/vendor
+MultiColumnForm/js/vendor
+NestedAccordion/js/vendor
+QuotesRotator/js/vendor
+VerticalTimeline/js/vendor
+ViewModeSwitch/js/vendor
