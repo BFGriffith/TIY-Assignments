@@ -92,10 +92,27 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   custom styles
    ========================================================================== */
-
-
+h1 {
+  text-align: center;
+}
+main {
+  margin: 5ex 5ex 5ex 5ex;
+  padding: 2ex 2ex 2ex 2ex;
+  position: relative;
+}
+div rotate {
+  float: center;
+}
+blockquote {
+  border:
+  border-color: black .2ex;
+}
+blockquote img {
+  float:right;
+  vertical-align: inherit;
+}
 
 
 
