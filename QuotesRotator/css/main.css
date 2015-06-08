@@ -92,10 +92,33 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   custom styles
    ========================================================================== */
+h1 {
 
+  text-align: center;
+  text-color: red;
+  text-decoration-color: darkred;
+  text-decoration-style: dashed;
+}
+main {
+  margin: 5ex 5ex 5ex 5ex;
+  padding: 2ex 2ex 2ex 2ex;
+  position: relative;
 
+}
+div rotate {
+  display:block;
+  float: center;
+}
+blockquote {
+  display: inline-block;
+  border-color: black .2ex;
+}
+blockquote img {
+  display: inline-block;
+  float: right;
+}
 
 
 
